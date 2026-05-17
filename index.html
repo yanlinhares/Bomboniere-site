@@ -787,7 +787,6 @@
       <div class="brand-mark" aria-hidden="true"></div>
       <div>
         Bomboniere
-        
       </div>
     </a>
     <nav class="nav-links" aria-label="Principal">
@@ -826,19 +825,23 @@
         </a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><div class="n">24</div><div class="l">Produtos</div></div>
+        <div class="stat"><div class="n">23</div><div class="l">Produtos</div></div>
         <div class="stat"><div class="n">6</div><div class="l">Categorias</div></div>
-        <div class="stat"><div class="n">4</div><div class="l">Marcas</div></div>
+        <div class="stat"><div class="n">3</div><div class="l">Marcas</div></div>
       </div>
     </div>
     <div class="collage" aria-hidden="true">
       <div class="blob blob-1"></div>
       <div class="blob blob-2"></div>
       <div class="blob blob-3"></div>
-      <div class="float-card fc-1"><img src="kitrufa.png" alt="" /><span class="tag">Ki-Trufa</span></div>
-      <div class="float-card fc-2"><img src="banze.png" alt="" /><span class="tag">Banzé</span></div>
+      <!-- Ki-Trufa real está dentro do arquivo menta.png -->
+      <div class="float-card fc-1"><img src="menta.png" alt="" /><span class="tag">Ki-Trufa</span></div>
+      <!-- Brazilian Coffee real está dentro do arquivo coloreti-11.png -->
+      <div class="float-card fc-2"><img src="coloreti-11.png" alt="" /><span class="tag">Brazilian Coffee</span></div>
+      <!-- Flopito Twist Vermelho real está dentro do arquivo flopito-twist-vermelho.png (correto) -->
       <div class="float-card fc-3"><img src="flopito-twist-vermelho.png" alt="" /><span class="tag">Flopito</span></div>
-      <div class="float-card fc-4"><img src="coloreti-11.png" alt="" /><span class="tag">Coloreti</span></div>
+      <!-- Coloreti Mini real está dentro do arquivo coloreti-18.png -->
+      <div class="float-card fc-4"><img src="coloreti-18.png" alt="" /><span class="tag">Coloreti</span></div>
       <div class="sticker">Novo<br>catálogo<br>2026</div>
     </div>
   </div>
@@ -847,8 +850,8 @@
 <!-- Marquee -->
 <div class="marquee" aria-hidden="true">
   <div class="marquee-track">
-    <span>FLORESTAL <span class="star">★</span> JAZAM <span class="star">★</span> KI-KAKAU <span class="star">★</span>   <span class="star">★</span> BALAS <span class="star">★</span> CHOCOLATES <span class="star">★</span> PIRULITOS <span class="star">★</span> DRÁGEAS <span class="star">★</span></span>
-    <span>FLORESTAL <span class="star">★</span> JAZAM <span class="star">★</span> KI-KAKAU <span class="star">★</span>   <span class="star">★</span> BALAS <span class="star">★</span> CHOCOLATES <span class="star">★</span> PIRULITOS <span class="star">★</span> DRÁGEAS <span class="star">★</span></span>
+    <span>FLORESTAL <span class="star">★</span> JAZAM <span class="star">★</span> KI-KAKAU <span class="star">★</span> BALAS <span class="star">★</span> CHOCOLATES <span class="star">★</span> PIRULITOS <span class="star">★</span> DRÁGEAS <span class="star">★</span></span>
+    <span>FLORESTAL <span class="star">★</span> JAZAM <span class="star">★</span> KI-KAKAU <span class="star">★</span> BALAS <span class="star">★</span> CHOCOLATES <span class="star">★</span> PIRULITOS <span class="star">★</span> DRÁGEAS <span class="star">★</span></span>
   </div>
 </div>
 
@@ -899,15 +902,15 @@
   <div class="container">
     <div class="section-head">
       <div>
-        <span class="eyebrow"><span class="pulse"></span>24 produtos</span>
+        <span class="eyebrow"><span class="pulse"></span>23 produtos</span>
         <h2>Nosso catálogo</h2>
       </div>
       <p class="lead">Filtre por categoria ou marca. Clique em qualquer produto para pedir direto no WhatsApp — venda em caixa ou pacote.</p>
     </div>
 
     <div class="chips" id="chips">
-      <button class="chip active" data-cat="todos">Todos <span class="count">24</span></button>
-      <button class="chip" data-cat="balas-mastigaveis">Balas & Mastigáveis <span class="count">4</span></button>
+      <button class="chip active" data-cat="todos">Todos <span class="count">23</span></button>
+      <button class="chip" data-cat="balas-mastigaveis">Balas & Mastigáveis <span class="count">3</span></button>
       <button class="chip" data-cat="balas-caramelos">Balas & Caramelos <span class="count">4</span></button>
       <button class="chip" data-cat="drageas-chocolates">Drágeas & Chocolates <span class="count">4</span></button>
       <button class="chip" data-cat="chocolates-bombons">Chocolates & Bombons <span class="count">4</span></button>
@@ -1028,38 +1031,48 @@
 
 <script>
   // ------ DATA ------
-  const PHONE = "5585991447566"; // ALTERE PARA O SEU NÚMERO DE WHATSAPP (DDI+DDD+NUMERO)
+  const PHONE = "5585991447566";
+
+  // IMPORTANTE: os arquivos PNG no repo estão com nomes que NÃO correspondem ao
+  // conteúdo da imagem (ex.: "brazilian-coffee.png" contém a foto do Bolibol).
+  // Para corrigir SEM precisar renomear os arquivos no GitHub, cada produto
+  // abaixo aponta para o arquivo PNG que de fato contém a foto correta.
+  // Removido: bala "Banzé / Boavistense".
   const products = [
-    // Balas & Mastigáveis
-    { id: 1, name: "Bala Brazilian Coffee", brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "brazilian-coffee.png", desc: "Caramelo sabor café com aquele toque do cafezinho brasileiro. Embalagem 108g." },
-    { id: 2, name: "Bala Mastigável Banzé Sortida", brand: " ", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "banze.png", desc: "Balas mastigáveis sortidas — a clássica do Banzé. Pacote 600g." },
-    { id: 3, name: "Bala Happy Iogurte Morango", brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "happy-iogurte.png", desc: "Bala mastigável recheada sabor iogurte com morango." },
-    { id: 4, name: "Bala Mint Hortelã", brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "menta.png", desc: "Bala de menta com hortelã refrescante, ideal para o pós-almoço." },
+    // Balas & Mastigáveis (3 — sem Banzé)
+    { id: 1,  name: "Bala Brazilian Coffee",            brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "coloreti-11.png",            desc: "Caramelo sabor café com aquele toque do cafezinho brasileiro. Embalagem 108g." },
+    { id: 3,  name: "Bala Happy Iogurte Morango",       brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "kakauzinho.png",             desc: "Bala mastigável recheada sabor iogurte com morango." },
+    { id: 4,  name: "Bala Mint Hortelã",                brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "moedas.png",                 desc: "Bala de menta com hortelã refrescante, ideal para o pós-almoço." },
+
     // Balas & Caramelos
-    { id: 5, name: "Bala Moranguinho Recheada", brand: "Florestal", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "moranguinho.png", desc: "Bala recheada sabor morango. Pacote 500g." },
-    { id: 6, name: "Bala Sortida Mastigável Mole", brand: "Florestal", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "sortida-mole.png", desc: "Bala sortida mastigável macia — vários sabores frutados." },
-    { id: 7, name: "Balinha do Coração Morango", brand: "Florestal", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "balinha-coracao.png", desc: "Balinha clássica em formato de coração, sabor morango. 500g." },
-    { id: 8, name: "Pingo de Leite", brand: "Jazam", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "pingo-de-leite.png", desc: "O número 1 do Brasil. Caramelo de leite cremoso, embalagem 100g." },
+    { id: 5,  name: "Bala Moranguinho Recheada",        brand: "Florestal", cat: "balas-caramelos",   catLabel: "Balas & Caramelos",   img: "pingo-de-leite.png",         desc: "Bala recheada sabor morango. Pacote 500g." },
+    { id: 6,  name: "Bala Sortida Mastigável Mole",     brand: "Florestal", cat: "balas-caramelos",   catLabel: "Balas & Caramelos",   img: "moranguinho.png",            desc: "Bala sortida mastigável macia — vários sabores frutados." },
+    { id: 7,  name: "Balinha do Coração Morango",       brand: "Florestal", cat: "balas-caramelos",   catLabel: "Balas & Caramelos",   img: "balinha-coracao.png",        desc: "Balinha clássica em formato de coração, sabor morango. 500g." },
+    { id: 8,  name: "Pingo de Leite",                   brand: "Jazam",     cat: "balas-caramelos",   catLabel: "Balas & Caramelos",   img: "sortida-mole.png",           desc: "O número 1 do Brasil. Caramelo de leite cremoso, embalagem 100g." },
+
     // Drágeas & Chocolates
-    { id: 9, name: "Bolibol Pote Chocolate", brand: "Ki-Kakau", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "bolibol.png", desc: "Bolinhas sabor chocolate em pote 680g. Premiado com brinde de bola." },
-    { id: 10, name: "Coloreti Mini 11g", brand: "Jazam", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "coloreti-11.png", desc: "Drágeas coloridas sabor chocolate. Display com 36 unidades de 11g." },
-    { id: 11, name: "Coloreti 18g", brand: "Jazam", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "coloreti-18.png", desc: "Drágeas sabor chocolate, sem glúten e baixo teor de sódio. 24x18g." },
-    { id: 12, name: "Croc-Choc Barra Crocante", brand: "Jazam", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "croc-choc.png", desc: "A sua barra crocante de chocolate. Display com 24 unidades." },
+    { id: 9,  name: "Bolibol Pote Chocolate",           brand: "Ki-Kakau",  cat: "drageas-chocolates",catLabel: "Drágeas & Chocolates",img: "brazilian-coffee.png",       desc: "Bolinhas sabor chocolate em pote 680g. Premiado com brinde de bola." },
+    { id: 10, name: "Coloreti Mini 11g",                brand: "Jazam",     cat: "drageas-chocolates",catLabel: "Drágeas & Chocolates",img: "coloreti-18.png",            desc: "Drágeas coloridas sabor chocolate. Display com 36 unidades de 11g." },
+    { id: 11, name: "Coloreti 18g",                     brand: "Jazam",     cat: "drageas-chocolates",catLabel: "Drágeas & Chocolates",img: "croc-choc.png",              desc: "Drágeas sabor chocolate, sem glúten e baixo teor de sódio. 24x18g." },
+    { id: 12, name: "Croc-Choc Barra Crocante",         brand: "Jazam",     cat: "drageas-chocolates",catLabel: "Drágeas & Chocolates",img: "ducrem.png",                 desc: "A sua barra crocante de chocolate. Display com 24 unidades." },
+
     // Chocolates & Bombons
-    { id: 13, name: "Ducrem Avelã", brand: "Jazam", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "ducrem.png", desc: "Creme de avelã para passar no pão — monte sua tropa Ducrem." },
-    { id: 14, name: "Guarda-Chuva de Chocolate", brand: "Ki-Kakau", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "guarda-chuva.png", desc: "O clássico guarda-chuvinha de chocolate, em display colorido." },
-    { id: 15, name: "Kakauzinho ao Leite", brand: "Florestal", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "kakauzinho.png", desc: "Barrinha de chocolate ao leite. Display com 30 unidades, 495g." },
-    { id: 16, name: "Ki-Trufa Crocante Sortida", brand: "Ki-Kakau", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "kitrufa.png", desc: "Trufas crocantes sortidas. 12 unidades, 204g — coco, brigadeiro, morango e maracujá." },
+    { id: 13, name: "Ducrem Avelã",                     brand: "Jazam",     cat: "chocolates-bombons",catLabel: "Chocolates & Bombons",img: "flopito-azedinho.png",       desc: "Creme de avelã para passar no pão — monte sua tropa Ducrem." },
+    { id: 14, name: "Guarda-Chuva de Chocolate",        brand: "Ki-Kakau",  cat: "chocolates-bombons",catLabel: "Chocolates & Bombons",img: "happy-iogurte.png",          desc: "O clássico guarda-chuvinha de chocolate, em display colorido." },
+    { id: 15, name: "Kakauzinho ao Leite",              brand: "Florestal", cat: "chocolates-bombons",catLabel: "Chocolates & Bombons",img: "kitrufa.png",                desc: "Barrinha de chocolate ao leite. Display com 30 unidades, 495g." },
+    { id: 16, name: "Ki-Trufa Crocante Sortida",        brand: "Ki-Kakau",  cat: "chocolates-bombons",catLabel: "Chocolates & Bombons",img: "menta.png",                  desc: "Trufas crocantes sortidas. 12 unidades, 204g — coco, brigadeiro, morango e maracujá." },
+
     // Bombons & Pirulitos
-    { id: 17, name: "Moedas ao Leite", brand: "Ki-Kakau", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "moedas.png", desc: "Moedas de chocolate ao leite. Pote 340g, ideal para festinhas." },
-    { id: 18, name: "Flopito Baby Coração Colorido", brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "flopito-baby-colorido.png", desc: "Pirulito coração colorido, sabor tutti-frutti. Pacote 400g." },
-    { id: 19, name: "Flopito Baby Coração Morango", brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "flopito-baby-morango.png", desc: "Pirulito coração sabor morango. 400g." },
-    { id: 20, name: "Flopito Chicle Q'Pinta", brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "flopito-qpinta.png", desc: "Pirulito com recheio de chicle, deixa a língua azul. Diversão garantida." },
+    { id: 17, name: "Moedas ao Leite",                  brand: "Ki-Kakau",  cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "moranguinho.png",            desc: "Moedas de chocolate ao leite. Pote 340g, ideal para festinhas." },
+    { id: 18, name: "Flopito Baby Coração Colorido",    brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "flopito-baby-morango.png",   desc: "Pirulito coração colorido, sabor tutti-frutti. Pacote 400g." },
+    { id: 19, name: "Flopito Baby Coração Morango",     brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "flopito-qpinta.png",         desc: "Pirulito coração sabor morango. 400g." },
+    { id: 20, name: "Flopito Chicle Q'Pinta",           brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "flopito-tutti-frutti.png",   desc: "Pirulito com recheio de chicle, deixa a língua azul. Diversão garantida." },
+
     // Pirulitos Flopito
-    { id: 21, name: "Flopito Chicle Azedinho", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "flopito-azedinho.png", desc: "Pirulito sortido azedinho com recheio de chicle. 500g." },
-    { id: 22, name: "Flopito Chicle Tutti-Frutti", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "flopito-tutti-frutti.png", desc: "Pirulito sabor tutti-frutti com recheio de chicle. 500g." },
-    { id: 23, name: "Flopito Twist Branco e Azul", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "flopito-twist-azul.png", desc: "Pirulito twist tutti-frutti. Pacote 450g." },
-    { id: 24, name: "Flopito Twist Vermelho e Amarelo", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "flopito-twist-vermelho.png", desc: "Pirulito twist tutti-frutti colorido. Pacote 450g." }
+    { id: 21, name: "Flopito Chicle Azedinho",          brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito",   img: "flopito-baby-colorido.png",  desc: "Pirulito sortido azedinho com recheio de chicle. 500g." },
+    { id: 22, name: "Flopito Chicle Tutti-Frutti",      brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito",   img: "flopito-twist-azul.png",     desc: "Pirulito sabor tutti-frutti com recheio de chicle. 500g." },
+    { id: 23, name: "Flopito Twist Branco e Azul",      brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito",   img: "flopito-twist-vermelho.png", desc: "Pirulito twist tutti-frutti. Pacote 450g." },
+    { id: 24, name: "Flopito Twist Vermelho e Amarelo", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito",   img: "guarda-chuva.png",           desc: "Pirulito twist tutti-frutti colorido. Pacote 450g." }
   ];
 
   // ------ RENDER ------
