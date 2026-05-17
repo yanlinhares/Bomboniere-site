@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Bomboniere · Doces que fazem o dia ficar mais doce</title>
+<meta name="description" content="Catálogo de balas, chocolates, pirulitos e drágeas — Bomboniere 2026." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🍬%3C/text%3E%3C/svg%3E" />
+<style>
+  :root {
+    --cream: #fff6ec;
+    --cream-2: #fdeede;
+    --ink: #1d130a;
+    --ink-soft: #3a2a1a;
+    --muted: #7b6553;
+    --pink: #ff5a8a;
+    --pink-deep: #e23a73;
+    --strawberry: #ff3b53;
+    --choco: #5a2a17;
+    --choco-deep: #2e1408;
+    --yellow: #ffd23a;
+    --mint: #34c096;
+    --line: #efd9c2;
+    --card: #ffffff;
+    --radius: 20px;
+    --shadow: 0 1px 0 rgba(45,20,8,.04), 0 10px 30px rgba(45,20,8,.07);
+    --shadow-hov: 0 1px 0 rgba(45,20,8,.04), 0 22px 50px rgba(45,20,8,.15);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+    color: var(--ink);
+    background: var(--cream);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  a { color: inherit; text-decoration: none; }
+
+  .container {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* ---------- TOPBAR (announcement) ---------- */
+  .topbar {
+    background: var(--choco-deep);
+    color: var(--cream);
+    font-size: 13px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    padding: 10px 0;
+    text-align: center;
+    font-weight: 600;
+  }
+  .topbar .dot { color: var(--yellow); margin: 0 10px; }
+
+  /* ---------- HEADER ---------- */
+  header.site {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    background: rgba(255,246,236,0.85);
+    backdrop-filter: saturate(180%) blur(14px);
+    -webkit-backdrop-filter: saturate(180%) blur(14px);
+    border-bottom: 1px solid var(--line);
+  }
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 78px;
+    gap: 24px;
+  }
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 22px;
+    letter-spacing: -0.02em;
+  }
+  .brand-mark {
+    width: 42px; height: 42px;
+    border-radius: 50%;
+    background:
+      radial-gradient(circle at 30% 30%, #ffd0db 0 30%, transparent 31%),
+      radial-gradient(circle at 70% 65%, #ffe39a 0 22%, transparent 23%),
+      var(--pink);
+    box-shadow: inset 0 -6px 0 rgba(0,0,0,.08), 0 6px 14px rgba(255,90,138,.45);
+  }
+  .brand small {
+    display: block;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 11px;
+    letter-spacing: 0.18em;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+  .nav-links {
+    display: flex;
+    gap: 28px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .nav-links a {
+    color: var(--ink-soft);
+    transition: color .15s ease;
+  }
+  .nav-links a:hover { color: var(--pink-deep); }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--ink);
+    color: var(--cream);
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    font-size: 14px;
+    border: 0;
+    cursor: pointer;
+    transition: transform .15s ease, background .15s ease, box-shadow .15s ease;
+  }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,.18); }
+  .btn.btn-wa { background: #25D366; color: white; }
+  .btn.btn-wa:hover { background: #1ebe5b; }
+  .btn.btn-ghost { background: transparent; color: var(--ink); border: 1.5px solid var(--ink); }
+
+  .hide-mobile { display: inline-flex; }
+  @media (max-width: 820px) {
+    .hide-mobile { display: none; }
+    .nav-links { display: none; }
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    padding: 64px 0 88px;
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 56px;
+    align-items: center;
+  }
+  @media (max-width: 900px) {
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: var(--cream-2);
+    border: 1px solid var(--line);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--choco);
+  }
+  .eyebrow .pulse {
+    width: 8px; height: 8px; background: var(--strawberry); border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255,59,83,.6);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%   { box-shadow: 0 0 0 0 rgba(255,59,83,.6); }
+    70%  { box-shadow: 0 0 0 10px rgba(255,59,83,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,59,83,0); }
+  }
+
+  .hero h1 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(48px, 7vw, 92px);
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    margin: 20px 0 18px;
+    color: var(--ink);
+  }
+  .hero h1 .wavy {
+    color: var(--pink-deep);
+    font-style: italic;
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+  }
+  .hero h1 .wavy::after {
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: -8px;
+    height: 10px;
+    background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 10'><path d='M0 5 Q 10 0 20 5 T 40 5 T 60 5 T 80 5' fill='none' stroke='%23ffd23a' stroke-width='4' stroke-linecap='round'/></svg>") repeat-x;
+    background-size: 80px 10px;
+  }
+  .hero p.lead {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    max-width: 520px;
+    margin: 0 0 30px;
+  }
+  .hero-cta {
+    display: flex;
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 36px;
+    margin-top: 40px;
+    padding-top: 28px;
+    border-top: 1px dashed var(--line);
+  }
+  .stat .n {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 32px;
+    font-weight: 800;
+    color: var(--ink);
+    letter-spacing: -0.02em;
+  }
+  .stat .l {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    font-weight: 600;
+  }
+
+  /* hero collage */
+  .collage {
+    position: relative;
+    height: 540px;
+  }
+  @media (max-width: 900px) { .collage { height: 380px; } }
+  .blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(0.5px);
+    z-index: 0;
+  }
+  .blob-1 {
+    width: 360px; height: 360px;
+    background: radial-gradient(circle at 30% 30%, #ffc6d8, var(--pink) 70%);
+    top: 30px; right: 20%;
+    opacity: .85;
+  }
+  .blob-2 {
+    width: 280px; height: 280px;
+    background: radial-gradient(circle at 70% 30%, #ffe7a3, var(--yellow) 70%);
+    bottom: 20px; left: 5%;
+    opacity: .8;
+  }
+  .blob-3 {
+    width: 220px; height: 220px;
+    background: radial-gradient(circle at 50% 50%, #cdebd9, var(--mint) 80%);
+    top: 50%; right: -20px;
+    opacity: .55;
+  }
+  .float-card {
+    position: absolute;
+    background: white;
+    border-radius: 22px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    z-index: 2;
+  }
+  .float-card img {
+    width: 100%; height: 100%; object-fit: contain;
+    display: block;
+    background: white;
+  }
+  .float-card .tag {
+    position: absolute;
+    left: 12px; bottom: 12px;
+    background: var(--ink);
+    color: var(--cream);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: 5px 9px;
+    border-radius: 999px;
+  }
+  .fc-1 { width: 220px; height: 270px; top: 30px; left: 6%; transform: rotate(-7deg); }
+  .fc-2 { width: 260px; height: 300px; top: 90px; right: 8%; transform: rotate(6deg); z-index: 3; }
+  .fc-3 { width: 200px; height: 230px; bottom: 20px; left: 28%; transform: rotate(-3deg); }
+  .fc-4 { width: 180px; height: 200px; bottom: 60px; right: 4%; transform: rotate(8deg); }
+  @media (max-width: 900px) {
+    .fc-1 { width: 150px; height: 190px; top: 10px; left: 2%; }
+    .fc-2 { width: 180px; height: 210px; top: 40px; right: 2%; }
+    .fc-3 { width: 140px; height: 160px; bottom: 10px; left: 22%; }
+    .fc-4 { width: 130px; height: 150px; bottom: 30px; right: 2%; }
+  }
+  .sticker {
+    position: absolute;
+    z-index: 4;
+    width: 90px; height: 90px;
+    border-radius: 50%;
+    background: var(--yellow);
+    color: var(--ink);
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    display: grid; place-items: center;
+    text-align: center;
+    line-height: 1.05;
+    font-size: 13px;
+    box-shadow: 0 6px 18px rgba(0,0,0,.12);
+    bottom: 50px;
+    left: 10%;
+    transform: rotate(-12deg);
+    animation: wobble 6s ease-in-out infinite;
+  }
+  @keyframes wobble {
+    0%,100% { transform: rotate(-12deg) translateY(0); }
+    50% { transform: rotate(-8deg) translateY(-6px); }
+  }
+
+  /* ---------- MARQUEE ---------- */
+  .marquee {
+    background: var(--ink);
+    color: var(--cream);
+    padding: 18px 0;
+    overflow: hidden;
+    border-top: 2px solid var(--choco-deep);
+    border-bottom: 2px solid var(--choco-deep);
+  }
+  .marquee-track {
+    display: flex;
+    gap: 56px;
+    white-space: nowrap;
+    animation: scroll 28s linear infinite;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    letter-spacing: -0.01em;
+  }
+  .marquee-track span { display: inline-flex; align-items: center; gap: 56px; }
+  .marquee-track .star { color: var(--yellow); }
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  /* ---------- CATEGORIES ---------- */
+  .section {
+    padding: 88px 0;
+  }
+  .section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    margin-bottom: 40px;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+  .section-head h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(36px, 5vw, 56px);
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 8px 0 0;
+  }
+  .section-head .lead {
+    color: var(--ink-soft);
+    font-size: 17px;
+    max-width: 480px;
+    line-height: 1.5;
+  }
+  .chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 36px;
+  }
+  .chip {
+    border: 1.5px solid var(--ink);
+    background: transparent;
+    color: var(--ink);
+    padding: 10px 18px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all .15s ease;
+    font-family: inherit;
+  }
+  .chip:hover { background: var(--ink); color: var(--cream); }
+  .chip.active { background: var(--ink); color: var(--cream); }
+  .chip .count {
+    display: inline-block;
+    margin-left: 6px;
+    opacity: 0.5;
+    font-size: 12px;
+    font-weight: 700;
+  }
+
+  /* ---------- PRODUCT GRID ---------- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+  }
+  @media (max-width: 1080px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 780px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px)  { .grid { grid-template-columns: 1fr; } }
+
+  .product {
+    background: var(--card);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    transition: transform .25s ease, box-shadow .25s ease;
+    position: relative;
+    cursor: pointer;
+  }
+  .product:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-hov);
+  }
+  .product:hover .product-img img { transform: scale(1.06) rotate(-2deg); }
+
+  .product-img {
+    aspect-ratio: 1 / 1;
+    background: var(--cream-2);
+    display: grid; place-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-img::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 50% 90%, rgba(0,0,0,.06), transparent 50%);
+  }
+  .product-img img {
+    width: 78%;
+    height: 78%;
+    object-fit: contain;
+    transition: transform .4s cubic-bezier(.2,.8,.2,1);
+    filter: drop-shadow(0 8px 14px rgba(0,0,0,.12));
+  }
+  .product .meta {
+    padding: 18px 18px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    flex: 1;
+  }
+  .product .brand {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--pink-deep);
+  }
+  .product h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    margin: 0;
+    line-height: 1.2;
+    color: var(--ink);
+  }
+  .product .cat {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 4px;
+  }
+  .product .row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: auto;
+    padding-top: 14px;
+  }
+  .product .pill {
+    background: var(--cream-2);
+    color: var(--choco);
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 999px;
+    letter-spacing: 0.06em;
+  }
+  .product .wa-btn {
+    background: var(--ink);
+    color: var(--cream);
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    transition: background .15s ease, transform .15s ease;
+  }
+  .product:hover .wa-btn { background: var(--pink-deep); transform: rotate(-12deg); }
+
+  .product .badge-new {
+    position: absolute;
+    top: 12px; left: 12px;
+    background: var(--strawberry);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    padding: 5px 9px;
+    border-radius: 999px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    z-index: 2;
+  }
+
+  /* ---------- FEATURES strip ---------- */
+  .features {
+    background: var(--cream-2);
+    padding: 56px 0;
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+  }
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  @media (max-width: 880px) { .features-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 480px) { .features-grid { grid-template-columns: 1fr; } }
+  .feature {
+    display: flex;
+    gap: 16px;
+    align-items: start;
+  }
+  .feature .ico {
+    width: 48px; height: 48px;
+    border-radius: 14px;
+    background: white;
+    display: grid; place-items: center;
+    color: var(--pink-deep);
+    flex-shrink: 0;
+    box-shadow: var(--shadow);
+  }
+  .feature h4 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 6px;
+    letter-spacing: -0.01em;
+  }
+  .feature p {
+    margin: 0;
+    color: var(--ink-soft);
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  /* ---------- CTA SECTION ---------- */
+  .cta {
+    background: var(--ink);
+    color: var(--cream);
+    border-radius: 32px;
+    padding: 64px;
+    margin: 88px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  @media (max-width: 720px) { .cta { padding: 40px 28px; } }
+  .cta-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+  }
+  @media (max-width: 720px) { .cta-grid { grid-template-columns: 1fr; } }
+  .cta h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: clamp(32px, 4.5vw, 52px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin: 0 0 16px;
+  }
+  .cta h2 em {
+    color: var(--yellow);
+    font-style: italic;
+    font-weight: 700;
+  }
+  .cta p {
+    color: rgba(255,246,236,.7);
+    font-size: 18px;
+    line-height: 1.5;
+    max-width: 460px;
+    margin: 0 0 28px;
+  }
+  .cta .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .cta .btn { background: var(--cream); color: var(--ink); }
+  .cta .btn.btn-wa { background: #25D366; color: white; }
+  .cta-decor {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 360px;
+    height: 360px;
+    z-index: 1;
+  }
+  .cta-decor svg { width: 100%; height: 100%; }
+
+  /* ---------- FOOTER ---------- */
+  footer {
+    background: var(--cream-2);
+    padding: 64px 0 28px;
+    border-top: 1px solid var(--line);
+  }
+  .footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 48px;
+  }
+  @media (max-width: 820px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .footer-grid { grid-template-columns: 1fr; } }
+  footer h5 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--muted);
+    margin: 0 0 16px;
+    font-weight: 700;
+  }
+  footer ul { list-style: none; padding: 0; margin: 0; }
+  footer li { margin-bottom: 10px; font-size: 14px; }
+  footer li a:hover { color: var(--pink-deep); }
+  footer .legal {
+    border-top: 1px solid var(--line);
+    padding-top: 24px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+  footer .big-word {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: clamp(80px, 18vw, 220px);
+    letter-spacing: -0.04em;
+    line-height: 0.9;
+    color: var(--ink);
+    opacity: 0.06;
+    text-align: center;
+    margin-top: 32px;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  /* ---------- WhatsApp Floating ---------- */
+  .wa-float {
+    position: fixed;
+    right: 24px; bottom: 24px;
+    background: #25D366;
+    color: white;
+    width: 60px; height: 60px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    box-shadow: 0 12px 30px rgba(37,211,102,.45);
+    z-index: 100;
+    animation: wa-bounce 3s ease-in-out infinite;
+    transition: transform .2s ease;
+  }
+  .wa-float:hover { transform: scale(1.1); }
+  @keyframes wa-bounce {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+
+  /* ---------- MODAL ---------- */
+  .modal-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(20,12,4,.6);
+    backdrop-filter: blur(6px);
+    z-index: 200;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    animation: fadein .2s ease;
+  }
+  .modal-backdrop.open { display: flex; }
+  @keyframes fadein { from { opacity: 0 } to { opacity: 1 } }
+  .modal {
+    background: white;
+    border-radius: 28px;
+    max-width: 720px;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 30px 80px rgba(0,0,0,.4);
+  }
+  @media (max-width: 640px) { .modal { grid-template-columns: 1fr; } }
+  .modal-img {
+    background: var(--cream-2);
+    display: grid;
+    place-items: center;
+    padding: 36px;
+    aspect-ratio: 1/1;
+  }
+  .modal-img img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 12px 24px rgba(0,0,0,.15)); }
+  .modal-body { padding: 36px; }
+  .modal-body .brand {
+    font-size: 11px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: var(--pink-deep);
+    margin-bottom: 8px;
+  }
+  .modal-body h3 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-size: 28px;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    margin: 0 0 12px;
+  }
+  .modal-body p { color: var(--ink-soft); line-height: 1.5; font-size: 15px; }
+  .modal-body .modal-cat {
+    display: inline-block;
+    background: var(--cream-2);
+    color: var(--choco);
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .modal-close {
+    position: absolute;
+    top: 16px; right: 16px;
+    background: white;
+    border: 0;
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    display: grid; place-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,.15);
+  }
+  .modal { position: relative; }
+
+  /* utility */
+  .hidden { display: none !important; }
+</style>
+</head>
+
+<body>
+
+<!-- Topbar -->
+<div class="topbar">
+  Frete grátis acima de R$ 150 <span class="dot">●</span> Atacado & varejo <span class="dot">●</span> Doces direto da fábrica
+</div>
+
+<!-- Header -->
+<header class="site">
+  <div class="container nav">
+    <a href="#" class="brand">
+      <div class="brand-mark" aria-hidden="true"></div>
+      <div>
+        Bomboniere
+        <small>desde 1998</small>
+      </div>
+    </a>
+    <nav class="nav-links" aria-label="Principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#categorias">Categorias</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="btn btn-wa hide-mobile" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.413c-.003 6.557-5.338 11.891-11.893 11.891a11.9 11.9 0 01-5.688-1.448L.057 24zM6.6 20.13a9.86 9.86 0 005.45 1.654c5.448 0 9.886-4.434 9.889-9.885a9.834 9.834 0 00-2.892-6.994 9.825 9.825 0 00-6.993-2.901C6.604 2.004 2.166 6.438 2.163 11.89a9.86 9.86 0 001.521 5.26l.236.376-1 3.648 3.68-.964z"/><path d="M9.075 7.18c-.247-.547-.508-.558-.742-.567l-.633-.008c-.22 0-.578.083-.88.413-.302.33-1.155 1.128-1.155 2.75 0 1.62 1.182 3.187 1.347 3.407.165.22 2.284 3.66 5.638 4.99 2.79 1.105 3.358.886 3.965.83.607-.055 1.957-.8 2.234-1.572.275-.77.275-1.43.193-1.572-.083-.137-.302-.22-.633-.385-.33-.165-1.957-.964-2.26-1.073-.302-.11-.523-.165-.743.165-.22.33-.852 1.073-1.045 1.293-.193.22-.385.248-.715.083-.33-.165-1.396-.515-2.66-1.643-.983-.877-1.647-1.96-1.84-2.29-.193-.33-.02-.508.144-.673.149-.148.33-.385.495-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.028-.578-.083-.165-.715-1.795-.992-2.452z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="eyebrow"><span class="pulse"></span>Catálogo 2026 atualizado</span>
+      <h1>
+        Doces que<br>
+        fazem o dia<br>
+        ficar <span class="wavy">mais doce.</span>
+      </h1>
+      <p class="lead">
+        Balas, chocolates, drágeas e pirulitos das melhores fábricas — Florestal, Jazam, Ki-Kakau e Boavistense — entregues direto na sua porta, em caixa ou unitário.
+      </p>
+      <div class="hero-cta">
+        <a href="#produtos" class="btn">
+          Ver catálogo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M5 12h14m-6-6 6 6-6 6"/></svg>
+        </a>
+        <a href="https://wa.me/5500000000000" target="_blank" rel="noopener" class="btn btn-ghost">
+          Pedir no WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><div class="n">24</div><div class="l">Produtos</div></div>
+        <div class="stat"><div class="n">6</div><div class="l">Categorias</div></div>
+        <div class="stat"><div class="n">4</div><div class="l">Marcas</div></div>
+      </div>
+    </div>
+    <div class="collage" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+      <div class="float-card fc-1"><img src="img/kitrufa.png" alt="" /><span class="tag">Ki-Trufa</span></div>
+      <div class="float-card fc-2"><img src="img/banze.png" alt="" /><span class="tag">Banzé</span></div>
+      <div class="float-card fc-3"><img src="img/flopito-twist-vermelho.png" alt="" /><span class="tag">Flopito</span></div>
+      <div class="float-card fc-4"><img src="img/coloreti-11.png" alt="" /><span class="tag">Coloreti</span></div>
+      <div class="sticker">Novo<br>catálogo<br>2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- Marquee -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>FLORESTAL <span class="star">★</span> JAZAM <span class="star">★</span> KI-KAKAU <span class="star">★</span> BOAVISTENSE <span class="star">★</span> BALAS <span class="star">★</span> CHOCOLATES <span class="star">★</span> PIRULITOS <span class="star">★</span> DRÁGEAS <span class="star">★</span></span>
+    <span>FLORESTAL <span class="star">★</span> JAZAM <span class="star">★</span> KI-KAKAU <span class="star">★</span> BOAVISTENSE <span class="star">★</span> BALAS <span class="star">★</span> CHOCOLATES <span class="star">★</span> PIRULITOS <span class="star">★</span> DRÁGEAS <span class="star">★</span></span>
+  </div>
+</div>
+
+<!-- Features -->
+<section class="features">
+  <div class="container features-grid">
+    <div class="feature">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h13v10H3z"/><path d="m16 10 5-3v10l-5-3"/></svg>
+      </div>
+      <div>
+        <h4>Entrega rápida</h4>
+        <p>Pedidos enviados em até 24h para todo o Brasil.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.5-7-11a5 5 0 0 1 9-3 5 5 0 0 1 9 3c0 6.5-7 11-7 11"/></svg>
+      </div>
+      <div>
+        <h4>Marcas favoritas</h4>
+        <p>Florestal, Jazam, Ki-Kakau e Boavistense num só lugar.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M9 12h6m-3-3v6"/></svg>
+      </div>
+      <div>
+        <h4>Caixa ou unitário</h4>
+        <p>Compre no atacado ou monte sua sacolinha avulsa.</p>
+      </div>
+    </div>
+    <div class="feature">
+      <div class="ico">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </div>
+      <div>
+        <h4>Para revenda</h4>
+        <p>Preços especiais para bombonieres, festas e mercadinhos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Catalog -->
+<section class="section" id="produtos">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow"><span class="pulse"></span>24 produtos</span>
+        <h2>Nosso catálogo</h2>
+      </div>
+      <p class="lead">Filtre por categoria ou marca. Clique em qualquer produto para pedir direto no WhatsApp — em caixa fechada ou unitário.</p>
+    </div>
+
+    <div class="chips" id="chips">
+      <button class="chip active" data-cat="todos">Todos <span class="count">24</span></button>
+      <button class="chip" data-cat="balas-mastigaveis">Balas & Mastigáveis <span class="count">4</span></button>
+      <button class="chip" data-cat="balas-caramelos">Balas & Caramelos <span class="count">4</span></button>
+      <button class="chip" data-cat="drageas-chocolates">Drágeas & Chocolates <span class="count">4</span></button>
+      <button class="chip" data-cat="chocolates-bombons">Chocolates & Bombons <span class="count">4</span></button>
+      <button class="chip" data-cat="bombons-pirulitos">Bombons & Pirulitos <span class="count">4</span></button>
+      <button class="chip" data-cat="pirulitos-flopito">Pirulitos Flopito <span class="count">4</span></button>
+    </div>
+
+    <div class="grid" id="grid"></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="contato" style="padding-top: 0;">
+  <div class="container">
+    <div class="cta">
+      <div class="cta-grid">
+        <div>
+          <h2>Faça seu pedido <em>num zap.</em></h2>
+          <p>Sem mínimo no varejo, com tabela especial para revendedores. Atendimento humano de segunda a sábado.</p>
+          <div class="actions">
+            <a class="btn btn-wa" href="https://wa.me/5500000000000" target="_blank" rel="noopener">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.413c-.003 6.557-5.338 11.891-11.893 11.891a11.9 11.9 0 01-5.688-1.448L.057 24zM6.6 20.13a9.86 9.86 0 005.45 1.654c5.448 0 9.886-4.434 9.889-9.885a9.834 9.834 0 00-2.892-6.994 9.825 9.825 0 00-6.993-2.901C6.604 2.004 2.166 6.438 2.163 11.89a9.86 9.86 0 001.521 5.26l.236.376-1 3.648 3.68-.964z"/></svg>
+              Chamar no WhatsApp
+            </a>
+            <a class="btn" href="mailto:contato@bomboniere.com.br">Mandar e-mail</a>
+          </div>
+        </div>
+        <div></div>
+      </div>
+      <div class="cta-decor">
+        <svg viewBox="0 0 360 360" fill="none">
+          <circle cx="180" cy="180" r="160" fill="#5a2a17"/>
+          <circle cx="180" cy="180" r="120" fill="#e23a73"/>
+          <circle cx="180" cy="180" r="80" fill="#ffd23a"/>
+          <circle cx="180" cy="180" r="40" fill="#fff6ec"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer id="sobre">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#" class="brand">
+          <div class="brand-mark" aria-hidden="true"></div>
+          <div>Bomboniere<small>desde 1998</small></div>
+        </a>
+        <p style="margin-top: 20px; color: var(--ink-soft); font-size: 14px; line-height: 1.6; max-width: 340px;">
+          Doceria atacadista com mais de 25 anos no mercado, levando o melhor do Brasil em balas e chocolates para revendedores e festas.
+        </p>
+      </div>
+      <div>
+        <h5>Produtos</h5>
+        <ul>
+          <li><a href="#produtos">Balas</a></li>
+          <li><a href="#produtos">Chocolates</a></li>
+          <li><a href="#produtos">Pirulitos</a></li>
+          <li><a href="#produtos">Drágeas</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <ul>
+          <li><a href="#">Sobre nós</a></li>
+          <li><a href="#">Revenda</a></li>
+          <li><a href="#">Política de troca</a></li>
+          <li><a href="#">Frete & prazos</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="https://wa.me/5500000000000">WhatsApp</a></li>
+          <li><a href="mailto:contato@bomboniere.com.br">E-mail</a></li>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Endereço</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">
+      <div>© 2026 Bomboniere. Todos os direitos reservados.</div>
+      <div>CNPJ 00.000.000/0001-00</div>
+    </div>
+    <div class="big-word">BOMBONIERE</div>
+  </div>
+</footer>
+
+<!-- Floating WA -->
+<a class="wa-float" href="https://wa.me/5500000000000" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.413c-.003 6.557-5.338 11.891-11.893 11.891a11.9 11.9 0 01-5.688-1.448L.057 24zM6.6 20.13a9.86 9.86 0 005.45 1.654c5.448 0 9.886-4.434 9.889-9.885a9.834 9.834 0 00-2.892-6.994 9.825 9.825 0 00-6.993-2.901C6.604 2.004 2.166 6.438 2.163 11.89a9.86 9.86 0 001.521 5.26l.236.376-1 3.648 3.68-.964z"/><path d="M9.075 7.18c-.247-.547-.508-.558-.742-.567l-.633-.008c-.22 0-.578.083-.88.413-.302.33-1.155 1.128-1.155 2.75 0 1.62 1.182 3.187 1.347 3.407.165.22 2.284 3.66 5.638 4.99 2.79 1.105 3.358.886 3.965.83.607-.055 1.957-.8 2.234-1.572.275-.77.275-1.43.193-1.572-.083-.137-.302-.22-.633-.385-.33-.165-1.957-.964-2.26-1.073-.302-.11-.523-.165-.743.165-.22.33-.852 1.073-1.045 1.293-.193.22-.385.248-.715.083-.33-.165-1.396-.515-2.66-1.643-.983-.877-1.647-1.96-1.84-2.29-.193-.33-.02-.508.144-.673.149-.148.33-.385.495-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.028-.578-.083-.165-.715-1.795-.992-2.452z"/></svg>
+</a>
+
+<!-- Modal -->
+<div class="modal-backdrop" id="modal">
+  <div class="modal">
+    <button class="modal-close" id="closeModal" aria-label="Fechar">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m6 6 12 12M6 18 18 6"/></svg>
+    </button>
+    <div class="modal-img"><img id="m-img" src="" alt="" /></div>
+    <div class="modal-body">
+      <div class="modal-cat" id="m-cat">—</div>
+      <div class="brand" id="m-brand">—</div>
+      <h3 id="m-name">—</h3>
+      <p id="m-desc">Disponível em caixa fechada ou avulso. Fale conosco para receber a tabela atualizada com preços de revenda.</p>
+      <div style="display:flex; gap: 10px; margin-top: 24px; flex-wrap: wrap;">
+        <a class="btn btn-wa" id="m-wa" href="#" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.413c-.003 6.557-5.338 11.891-11.893 11.891a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+          Pedir no WhatsApp
+        </a>
+        <a class="btn btn-ghost" id="closeModal2">Voltar</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // ------ DATA ------
+  const PHONE = "5500000000000"; // ALTERE PARA O SEU NÚMERO DE WHATSAPP (DDI+DDD+NUMERO)
+  const products = [
+    // Balas & Mastigáveis
+    { id: 1, name: "Bala Brazilian Coffee", brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "img/brazilian-coffee.png", desc: "Caramelo sabor café com aquele toque do cafezinho brasileiro. Embalagem 108g." },
+    { id: 2, name: "Bala Mastigável Banzé Sortida", brand: "Boavistense", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "img/banze.png", desc: "Balas mastigáveis sortidas — a clássica do Banzé. Pacote 600g." },
+    { id: 3, name: "Bala Happy Iogurte Morango", brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "img/happy-iogurte.png", desc: "Bala mastigável recheada sabor iogurte com morango." },
+    { id: 4, name: "Bala Mint Hortelã", brand: "Florestal", cat: "balas-mastigaveis", catLabel: "Balas & Mastigáveis", img: "img/menta.png", desc: "Bala de menta com hortelã refrescante, ideal para o pós-almoço." },
+    // Balas & Caramelos
+    { id: 5, name: "Bala Moranguinho Recheada", brand: "Florestal", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "img/moranguinho.png", desc: "Bala recheada sabor morango. Pacote 500g." },
+    { id: 6, name: "Bala Sortida Mastigável Mole", brand: "Florestal", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "img/sortida-mole.png", desc: "Bala sortida mastigável macia — vários sabores frutados." },
+    { id: 7, name: "Balinha do Coração Morango", brand: "Florestal", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "img/balinha-coracao.png", desc: "Balinha clássica em formato de coração, sabor morango. 500g." },
+    { id: 8, name: "Pingo de Leite", brand: "Jazam", cat: "balas-caramelos", catLabel: "Balas & Caramelos", img: "img/pingo-de-leite.png", desc: "O número 1 do Brasil. Caramelo de leite cremoso, embalagem 100g." },
+    // Drágeas & Chocolates
+    { id: 9, name: "Bolibol Pote Chocolate", brand: "Ki-Kakau", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "img/bolibol.png", desc: "Bolinhas sabor chocolate em pote 680g. Premiado com brinde de bola." },
+    { id: 10, name: "Coloreti Mini 11g", brand: "Jazam", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "img/coloreti-11.png", desc: "Drágeas coloridas sabor chocolate. Display com 36 unidades de 11g." },
+    { id: 11, name: "Coloreti 18g", brand: "Jazam", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "img/coloreti-18.png", desc: "Drágeas sabor chocolate, sem glúten e baixo teor de sódio. 24x18g." },
+    { id: 12, name: "Croc-Choc Barra Crocante", brand: "Jazam", cat: "drageas-chocolates", catLabel: "Drágeas & Chocolates", img: "img/croc-choc.png", desc: "A sua barra crocante de chocolate. Display com 24 unidades." },
+    // Chocolates & Bombons
+    { id: 13, name: "Ducrem Avelã", brand: "Jazam", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "img/ducrem.png", desc: "Creme de avelã para passar no pão — monte sua tropa Ducrem." },
+    { id: 14, name: "Guarda-Chuva de Chocolate", brand: "Ki-Kakau", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "img/guarda-chuva.png", desc: "O clássico guarda-chuvinha de chocolate, em display colorido." },
+    { id: 15, name: "Kakauzinho ao Leite", brand: "Florestal", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "img/kakauzinho.png", desc: "Barrinha de chocolate ao leite. Display com 30 unidades, 495g." },
+    { id: 16, name: "Ki-Trufa Crocante Sortida", brand: "Ki-Kakau", cat: "chocolates-bombons", catLabel: "Chocolates & Bombons", img: "img/kitrufa.png", desc: "Trufas crocantes sortidas. 12 unidades, 204g — coco, brigadeiro, morango e maracujá." },
+    // Bombons & Pirulitos
+    { id: 17, name: "Moedas ao Leite", brand: "Ki-Kakau", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "img/moedas.png", desc: "Moedas de chocolate ao leite. Pote 340g, ideal para festinhas." },
+    { id: 18, name: "Flopito Baby Coração Colorido", brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "img/flopito-baby-colorido.png", desc: "Pirulito coração colorido, sabor tutti-frutti. Pacote 400g." },
+    { id: 19, name: "Flopito Baby Coração Morango", brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "img/flopito-baby-morango.png", desc: "Pirulito coração sabor morango. 400g." },
+    { id: 20, name: "Flopito Chicle Q'Pinta", brand: "Florestal", cat: "bombons-pirulitos", catLabel: "Bombons & Pirulitos", img: "img/flopito-qpinta.png", desc: "Pirulito com recheio de chicle, deixa a língua azul. Diversão garantida." },
+    // Pirulitos Flopito
+    { id: 21, name: "Flopito Chicle Azedinho", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "img/flopito-azedinho.png", desc: "Pirulito sortido azedinho com recheio de chicle. 500g." },
+    { id: 22, name: "Flopito Chicle Tutti-Frutti", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "img/flopito-tutti-frutti.png", desc: "Pirulito sabor tutti-frutti com recheio de chicle. 500g." },
+    { id: 23, name: "Flopito Twist Branco e Azul", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "img/flopito-twist-azul.png", desc: "Pirulito twist tutti-frutti. Pacote 450g." },
+    { id: 24, name: "Flopito Twist Vermelho e Amarelo", brand: "Florestal", cat: "pirulitos-flopito", catLabel: "Pirulitos Flopito", img: "img/flopito-twist-vermelho.png", desc: "Pirulito twist tutti-frutti colorido. Pacote 450g." }
+  ];
+
+  // ------ RENDER ------
+  const grid = document.getElementById("grid");
+  function render(filter = "todos") {
+    grid.innerHTML = "";
+    const list = filter === "todos" ? products : products.filter(p => p.cat === filter);
+    list.forEach((p, i) => {
+      const isNew = [11, 16, 13].includes(p.id);
+      const card = document.createElement("article");
+      card.className = "product";
+      card.style.animationDelay = `${i * 30}ms`;
+      card.innerHTML = `
+        ${isNew ? `<span class="badge-new">Novo</span>` : ""}
+        <div class="product-img"><img src="${p.img}" alt="${p.name}" loading="lazy" /></div>
+        <div class="meta">
+          <div class="brand">${p.brand}</div>
+          <h3>${p.name}</h3>
+          <div class="cat">${p.catLabel}</div>
+          <div class="row">
+            <span class="pill">Caixa · Unitário</span>
+            <span class="wa-btn" aria-hidden="true">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.413c-.003 6.557-5.338 11.891-11.893 11.891a11.9 11.9 0 01-5.688-1.448L.057 24z"/></svg>
+            </span>
+          </div>
+        </div>
+      `;
+      card.addEventListener("click", () => openModal(p));
+      grid.appendChild(card);
+    });
+  }
+  render();
+
+  // ------ FILTERS ------
+  const chips = document.querySelectorAll(".chip");
+  chips.forEach(c => c.addEventListener("click", () => {
+    chips.forEach(x => x.classList.remove("active"));
+    c.classList.add("active");
+    render(c.dataset.cat);
+  }));
+
+  // ------ MODAL ------
+  const modal = document.getElementById("modal");
+  function openModal(p) {
+    document.getElementById("m-img").src = p.img;
+    document.getElementById("m-img").alt = p.name;
+    document.getElementById("m-name").textContent = p.name;
+    document.getElementById("m-brand").textContent = p.brand;
+    document.getElementById("m-cat").textContent = p.catLabel;
+    document.getElementById("m-desc").textContent = p.desc;
+    const msg = encodeURIComponent(`Olá! Gostaria de saber o preço de "${p.name}" (${p.brand}).`);
+    document.getElementById("m-wa").href = `https://wa.me/${PHONE}?text=${msg}`;
+    modal.classList.add("open");
+    document.body.style.overflow = "hidden";
+  }
+  function closeModal() {
+    modal.classList.remove("open");
+    document.body.style.overflow = "";
+  }
+  document.getElementById("closeModal").addEventListener("click", closeModal);
+  document.getElementById("closeModal2").addEventListener("click", closeModal);
+  modal.addEventListener("click", e => { if (e.target === modal) closeModal(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
+</script>
+
+</body>
+</html>
